@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flip.id/
+docs: https://docs.flip.id/
+summary:
+  types: [http]
+  http_schemes: [basic]
+  api_key_in: []
+  oauth2_flows: []
+  extras: [ip-whitelisting, callback-token-validation]
+schemes:
+- name: SecretKeyBasicAuth
+  type: http
+  scheme: basic
+  description: >-
+    Flip for Business uses HTTP Basic authentication. The account secret key is
+    sent as the Basic-auth username with an empty password. The secret key is
+    retrieved from the Flip for Business dashboard (Integration / Developer
+    settings). Separate keys exist for the sandbox and production environments.
+  sources: [https://docs.flip.id/]
+controls:
+- id: ip-whitelisting
+  description: >-
+    Requests can be restricted to a set of whitelisted server IP addresses
+    configured in the Flip for Business dashboard.
+- id: callback-token-validation
+  description: >-
+    Incoming callbacks/webhooks carry a validation token that must be verified
+    against the account's configured validation token before the payload is
+    trusted.
+- id: content-type-validation
+  description: >-
+    As of the 2025-12-07 security enhancement, requests are validated for a
+    correct Content-Type and an inquiry_key where applicable.
