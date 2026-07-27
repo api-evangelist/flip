@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flip.id/changelog
+feeds:
+  rss: https://docs.flip.id/changelog/rss.xml
+  atom: https://docs.flip.id/changelog/atom.xml
+  json: https://docs.flip.id/changelog/feed.json
+scheme: dated-changelog
+entries:
+- date: '2026-05-14'
+  title: 'International Transfer: Transaction ID Format Change'
+  url: https://docs.flip.id/changelog/it-transaction-id-format-change
+  breaking: true
+  tags: [international-transfer, breaking-change]
+- date: '2026-02-12'
+  title: 'New Feature: Sub-Merchant Settlement & Automated Commission Splitting'
+  url: https://docs.flip.id/changelog/sub-merchant-commission-splitting
+  breaking: false
+  tags: [sub-merchant, commission, feature]
+- date: '2026-02-11'
+  title: 'Accept Payment: Link ID Format Change'
+  url: https://docs.flip.id/changelog/accept-payment-link-id-format-change
+  breaking: true
+  tags: [accept-payment, breaking-change]
+- date: '2025-12-07'
+  title: 'Security Enhancement: Content-Type and inquiry_key Validation'
+  url: https://docs.flip.id/changelog/security-validation-enhancement
+  breaking: false
+  tags: [security, validation]
+- date: '2025-10-22'
+  title: 'MoneyTransfer: Transaction ID Format Change'
+  url: https://docs.flip.id/changelog/mt-transaction-id-format-change
+  breaking: true
+  tags: [money-transfer, breaking-change]

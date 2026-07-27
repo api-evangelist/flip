@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flip.id/
+docs: https://docs.flip.id/
+authentication:
+  style: http-basic-secret-key
+  ref: authentication/flip-authentication.yml
+idempotency:
+  supported: true
+  mechanism: idempotency-key
+  location: header
+  description: >-
+    Flip for Business supports idempotent requests via an idempotency key so
+    that retried write requests (e.g. creating a disbursement) are not executed
+    more than once. Documented under the idempotency-key / idempotent-request
+    guidance.
+  docs: https://docs.flip.id/
+network_controls:
+  ip_whitelisting: true
+  content_type_validation: true
+callbacks:
+  supported: true
+  style: http-callback-webhook
+  validation: token-validation
+  ref: asyncapi/flip-webhooks.yml
+versioning:
+  scheme: uri-path
+  current: v2
+  base_url: https://bigflip.id/api/v2
+  ref: lifecycle/flip-lifecycle.yml
+error_handling:
+  documented: true
+  reference: https://docs.flip.id/
+  note: >-
+    Flip publishes an error-code / error-list reference in its documentation.
+    Specific codes are not captured here to avoid transcription error; see the
+    docs error reference.
+sandbox:
+  supported: true
+  ref: sandbox/flip-sandbox.yml

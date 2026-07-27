@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flip.id/
+docs: https://docs.flip.id/
+environments:
+- name: sandbox
+  base_url: https://bigflip.id/big_sandbox_api/v2
+  description: >-
+    Flip for Business sandbox environment. Uses a separate sandbox secret key
+    obtained from the Flip for Business dashboard. Verified reachable
+    (HTTP 401 without credentials).
+- name: production
+  base_url: https://bigflip.id/api/v2
+  description: Production Flip for Business API (HTTP 401 without credentials).
+test_tooling:
+- name: MT ID Simulator (Money Transfer ID Simulator)
+  url: https://docs.flip.id/mt-id-simulator
+  description: >-
+    Interactive simulator for exercising Money Transfer / disbursement
+    transaction statuses in the sandbox without moving real funds.
+- name: Dashboard sandbox mode
+  description: >-
+    The Flip for Business dashboard exposes a sandbox mode with its own API key,
+    accept-payment overview, history, and API log inspection for testing
+    integrations before going live.
+note: >-
+  Flip does not publish fixed magic test card numbers in the public docs surface
+  reachable here; testing is driven through the sandbox key + MT ID Simulator.
+  No test values are invented.

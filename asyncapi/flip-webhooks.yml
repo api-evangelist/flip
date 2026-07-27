@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flip.id/
+spec_type: Webhooks
+docs: https://docs.flip.id/
+transport: http-callback
+delivery: POST to a merchant-configured callback URL
+security:
+  validation: token-validation
+  description: >-
+    Each callback includes a validation token that the receiver must match
+    against the account's configured validation token before trusting the
+    payload. Callbacks are configured per product in the Flip for Business
+    dashboard.
+events:
+- name: money-transfer-callback
+  product: Money Transfer / Disbursement
+  description: Notifies the merchant of a disbursement/money-transfer status change.
+  tags: [money-transfer, disbursement, callback]
+- name: accept-payment-callback
+  product: Accept Payment
+  description: Notifies the merchant when a bill / payment link is paid or its status changes.
+  tags: [accept-payment, payment-link, callback]
+- name: international-transfer-callback
+  product: International Transfer
+  description: Notifies the merchant of an international transfer status change (including RFI requests).
+  tags: [international-transfer, callback]
+note: >-
+  Flip documents webhook/callback notifications ("handling callback",
+  "notification") but does not publish an AsyncAPI document; captured here as a
+  Webhooks catalog. Event names reflect the documented product callbacks.

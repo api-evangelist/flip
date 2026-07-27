@@ -1,0 +1,39 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/flip-id
+note: >-
+  Flip does not publish first-party language SDKs (npm/PyPI/etc.); it ships
+  official e-commerce payment plugins from the flip-id GitHub organization plus
+  sample integration demos. official:true is set only for plugins authored by
+  Flip (contributor "flipforbusiness" / flip-id org).
+packages:
+- language: php
+  registry: github
+  name: flip-woocommerce
+  url: https://github.com/flip-id/flip-woocommerce
+  install: Install "Flip for Business" plugin in WooCommerce/WordPress
+  official: true
+  kind: ecommerce-plugin
+  platform: WooCommerce
+- language: php
+  registry: github
+  name: Flip-Magento2-Payment-Module
+  url: https://github.com/flip-id/Flip-Magento2-Payment-Module
+  install: Install the Flip payment module in Magento 2
+  official: true
+  kind: ecommerce-plugin
+  platform: Magento 2
+- language: swift
+  registry: github
+  name: ffb-sample-demo-mobile
+  url: https://github.com/flip-id/ffb-sample-demo-mobile
+  official: true
+  kind: sample
+  platform: iOS
+- language: javascript
+  registry: github
+  name: checkout-redirection
+  url: https://github.com/flip-id/checkout-redirection
+  official: true
+  kind: sample
+  platform: web

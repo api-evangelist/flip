@@ -1,8 +1,18 @@
 aid: flip
 name: Flip
-description: 'Flip is a company surfaced as a portfolio company of insight-partners, lightspeed-venture-partners,
-  y-combinator and added to the API Evangelist network as a stub for enrichment. Sector: payments. This
-  profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Flip (PT Fliptech Lentera Inspirasi Pertiwi) is an Indonesian financial
+  technology company offering low-cost interbank money transfers, bill payments,
+  and cross-border remittance to consumers, and a "Flip for Business" (bigflip)
+  suite of payment APIs to companies. The Flip for Business API lets businesses
+  disburse money to any Indonesian bank or e-wallet (Money Transfer /
+  Disbursement API), accept online payments via bank transfer, virtual accounts,
+  e-wallets, cards, and retail outlets (Accept Payment API), and send
+  international transfers (International Transfer API). The API is HTTP Basic
+  authenticated with a secret key, supports IP whitelisting, idempotency keys,
+  and signed callbacks/webhooks, and ships a sandbox environment plus WooCommerce
+  and Magento 2 payment plugins. Flip is backed by Insight Partners, Lightspeed
+  Venture Partners, and Y Combinator.
 url: https://raw.githubusercontent.com/api-evangelist/flip/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,18 +22,146 @@ x-backed-by:
 - y-combinator
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://flip.id/images/logo-big-flip.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Payments
-apis: []
+- Payment Gateway
+- Money Transfer
+- Disbursement
+- Remittance
+- Fintech
+- Indonesia
+- International Transfer
+- Banking
+apis:
+- name: Flip Money Transfer (Disbursement) API
+  description: >-
+    Disburse money programmatically to any Indonesian bank account or e-wallet.
+    Create single and bulk disbursements, inquire bank accounts, list bank codes,
+    and receive callbacks on disbursement status. HTTP Basic auth with a secret
+    key; supports idempotency keys and IP whitelisting.
+  humanURL: https://docs.flip.id/
+  baseURL: https://bigflip.id/api/v2
+  tags:
+  - Money Transfer
+  - Disbursement
+  - Bulk Disbursement
+  - Bank Account Inquiry
+  properties:
+  - type: Documentation
+    url: https://docs.flip.id/
+- name: Flip Accept Payment API
+  description: >-
+    Accept online payments from customers via bank transfer, virtual accounts,
+    e-wallets, cards, QRIS, and retail outlets. Create payment links / bills,
+    configure payment methods and expiry, and receive payment callbacks.
+  humanURL: https://docs.flip.id/
+  baseURL: https://bigflip.id/api/v2
+  tags:
+  - Accept Payment
+  - Payment Link
+  - Virtual Account
+  - Checkout
+  properties:
+  - type: Documentation
+    url: https://docs.flip.id/
+- name: Flip International Transfer API
+  description: >-
+    Send cross-border international transfers, including bulk international
+    transfers, with recipient inquiry, request-for-information (RFI) handling,
+    and transfer status callbacks.
+  humanURL: https://docs.flip.id/
+  baseURL: https://bigflip.id/api/v2
+  tags:
+  - International Transfer
+  - Remittance
+  - Cross Border
+  properties:
+  - type: Documentation
+    url: https://docs.flip.id/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/flip-domain-security.yml
 - type: Website
   url: https://flip.id/
+- type: DeveloperPortal
+  url: https://docs.flip.id/
+- type: Documentation
+  url: https://docs.flip.id/
+- type: GettingStarted
+  url: https://docs.flip.id/
+- type: Blog
+  url: https://docs.flip.id/changelog
+- type: Pricing
+  url: https://flip.id/business/pricing
+- type: SignUp
+  url: https://business.flip.id/
+- type: Login
+  url: https://business.flip.id/
+- type: Support
+  url: https://help.flip.id/
+- type: HelpCenter
+  url: https://help.flip.id/
+- type: PrivacyPolicy
+  url: https://flip.id/privacy-policy
+- type: TermsOfService
+  url: https://flip.id/syarat-ketentuan
+- type: GitHubOrganization
+  url: https://github.com/flip-id
+- type: Business
+  url: https://flip.id/business
+- type: ChangeLog
+  url: https://docs.flip.id/changelog
+- type: ChangeLog
+  url: changelog/flip-changelog.yml
+  name: Flip changelog (captured)
+- type: Authentication
+  url: authentication/flip-authentication.yml
+  name: Flip authentication profile
+- type: Conventions
+  url: conventions/flip-conventions.yml
+  name: Flip API conventions
+- type: Idempotency
+  url: conventions/flip-conventions.yml
+  name: Flip idempotency-key support
+- type: Sandbox
+  url: sandbox/flip-sandbox.yml
+  name: Flip sandbox and MT ID Simulator
+- type: Webhooks
+  url: asyncapi/flip-webhooks.yml
+  name: Flip callback/webhook catalog
+- type: Lifecycle
+  url: lifecycle/flip-lifecycle.yml
+  name: Flip versioning and lifecycle
+- type: Packages
+  url: packages/flip-packages.yml
+  name: Flip official plugins
+- type: SDKs
+  url: packages/flip-packages.yml
+  name: Flip WooCommerce and Magento 2 plugins
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

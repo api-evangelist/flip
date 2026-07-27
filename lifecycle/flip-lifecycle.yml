@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flip.id/changelog
+versioning:
+  scheme: uri-path
+  current: v2
+  base_url: https://bigflip.id/api/v2
+  observed_versions: [v2]
+  docs: https://docs.flip.id/
+changelog:
+  url: https://docs.flip.id/changelog
+  ref: changelog/flip-changelog.yml
+  note: >-
+    Flip communicates breaking changes (e.g. transaction-ID and link-ID format
+    changes) through its dated changelog rather than a formal versioned
+    deprecation policy page.
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: >-
+    No dedicated deprecation-policy page found; breaking changes are announced
+    via the changelog with effective dates.
+status_page: null
+sla:
+  url: null
+recent_breaking_changes:
+- date: '2026-05-14'
+  change: International Transfer transaction ID format change
+- date: '2026-02-11'
+  change: Accept Payment link ID format change
+- date: '2025-10-22'
+  change: Money Transfer transaction ID format change
