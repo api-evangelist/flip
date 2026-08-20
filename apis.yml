@@ -91,6 +91,10 @@ apis:
   tags:
   - International Transfer
   - Remittance
+  - Cross-Border
+  tags_raw:
+  - International Transfer
+  - Remittance
   - Cross Border
   properties:
   - type: Documentation
