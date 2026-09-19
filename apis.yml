@@ -56,6 +56,17 @@ tags:
 - Payments
 - Payment Gateway
 - Money Transfer
+- Disbursements
+- Remittances
+- Fintech
+- Indonesia
+- International Transfer
+- Banking
+tags_raw:
+- Company
+- Payments
+- Payment Gateway
+- Money Transfer
 - Disbursement
 - Remittance
 - Fintech
@@ -73,6 +84,11 @@ apis:
   baseURL: https://bigflip.id/api/v2
   tags:
   - Money Transfer
+  - Disbursements
+  - Bulk Disbursement
+  - Bank Account Inquiry
+  tags_raw:
+  - Money Transfer
   - Disbursement
   - Bulk Disbursement
   - Bank Account Inquiry
@@ -87,6 +103,11 @@ apis:
   humanURL: https://docs.flip.id/
   baseURL: https://bigflip.id/api/v2
   tags:
+  - Accept Payment
+  - Payment Links
+  - Virtual Accounts
+  - Checkout
+  tags_raw:
   - Accept Payment
   - Payment Link
   - Virtual Account
@@ -103,7 +124,7 @@ apis:
   baseURL: https://bigflip.id/api/v2
   tags:
   - International Transfer
-  - Remittance
+  - Remittances
   - Cross-Border
   tags_raw:
   - International Transfer
